@@ -1,7 +1,7 @@
 ## Run
 
 ```
-docker-compose up -d web
+docker-compose up -d nginx
 ```
 
 ### Usage
