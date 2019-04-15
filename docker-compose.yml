@@ -1,0 +1,19 @@
+version: '2'
+
+
+services:
+
+  web:
+    build: .
+    image: sandbox/nodejs-bench
+    command: node src/index.js
+    volumes:
+      - .:/app
+    ports:
+      - 8000:3000
+    depends_on:
+      - redis
+
+
+  redis:
+    image: redis:alpine
